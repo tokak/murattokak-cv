@@ -1,4 +1,4 @@
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Briefcase } from 'lucide-react';
 
 const experiences = [
   {
@@ -29,37 +29,36 @@ const experiences = [
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="py-20 px-6 bg-card/30">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="section-title">// Deneyim & Projeler</h2>
+    <section id="experience" className="py-16 px-6">
+      <div className="max-w-3xl mx-auto">
+        <h2 className="section-title">İş Deneyimi</h2>
+        <p className="section-subtitle">Profesyonel kariyer geçmişim</p>
         
-        <div className="relative pl-8">
-          {/* Timeline line */}
-          <div className="timeline-line" />
-          
-          <div className="space-y-12">
-            {experiences.map((exp, index) => (
-              <div 
-                key={index} 
-                className="relative group"
-              >
-                {/* Timeline dot */}
-                <div className="absolute -left-8 top-2 w-3 h-3 rounded-full bg-primary border-2 border-background group-hover:glow-effect transition-all duration-300" />
+        <div className="space-y-6">
+          {experiences.map((exp, index) => (
+            <div key={index} className="card-corporate">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-primary/10 text-primary shrink-0">
+                  <Briefcase className="w-5 h-5" />
+                </div>
                 
-                <div className="card-gradient p-6 rounded-xl border border-border hover:border-primary/30 transition-all duration-300">
-                  <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                     <div>
-                      <h3 className="text-xl font-semibold text-foreground">{exp.title}</h3>
+                      <h3 className="text-lg font-semibold text-foreground">{exp.title}</h3>
                       <p className="text-primary font-medium">{exp.company}</p>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <span className="font-mono text-sm text-muted-foreground">{exp.period}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm text-muted-foreground bg-secondary px-3 py-1 rounded-full">
+                        {exp.period}
+                      </span>
                       {exp.link && (
                         <a 
                           href={exp.link} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                          className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
+                          aria-label="Web sitesi"
                         >
                           <ExternalLink className="w-4 h-4" />
                         </a>
@@ -67,13 +66,13 @@ const ExperienceSection = () => {
                     </div>
                   </div>
                   
-                  <p className="text-secondary-foreground mb-4">{exp.description}</p>
+                  <p className="text-muted-foreground text-sm mb-3">{exp.description}</p>
                   
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech) => (
                       <span 
                         key={tech}
-                        className="px-3 py-1 text-xs font-mono bg-secondary/50 text-muted-foreground rounded-md"
+                        className="px-2.5 py-1 text-xs font-medium bg-secondary text-secondary-foreground rounded-md"
                       >
                         {tech}
                       </span>
@@ -81,8 +80,8 @@ const ExperienceSection = () => {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

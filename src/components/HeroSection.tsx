@@ -1,94 +1,59 @@
-import { Github, Linkedin, Mail, Phone, BookOpen } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, FileText } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden">
-      {/* Background glow effect */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-      
-      <div className="max-w-4xl w-full relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Profile Image */}
-          <div className="relative group">
-            <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-xl group-hover:bg-primary/30 transition-colors duration-500" />
-            <div className="relative w-48 h-48 lg:w-56 lg:h-56 rounded-2xl bg-secondary border border-border overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                <span className="text-sm font-mono">foto.jpg</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Content */}
-          <div className="flex-1 text-center lg:text-left">
-            <p className="font-mono text-primary text-sm mb-3 opacity-0 animate-fade-up stagger-1">
-              {'<developer />'}
-            </p>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 opacity-0 animate-fade-up stagger-2">
-              Murat <span className="text-gradient">Tokak</span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-muted-foreground mb-6 opacity-0 animate-fade-up stagger-3">
-              Full Stack Software Developer
-            </p>
-            
-            <p className="text-secondary-foreground leading-relaxed max-w-xl mb-8 opacity-0 animate-fade-up stagger-4">
-              Kurumsal yazılım geliştirme, API entegrasyonları ve veritabanı yönetimi konularında 
-              deneyimli yazılım geliştiricisi. Temiz kod prensipleri ve sürdürülebilir 
-              mimari yapılar konusunda uzmanlaşmış.
-            </p>
-
-            {/* Social Links */}
-            <div className="flex items-center justify-center lg:justify-start gap-4 opacity-0 animate-fade-up stagger-5">
-              <a 
-                href="https://github.com/murattokak" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:glow-effect"
-                aria-label="GitHub"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://linkedin.com/in/murattokak" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:glow-effect"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://medium.com/@murattokak" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:glow-effect"
-                aria-label="Medium"
-              >
-                <BookOpen className="w-5 h-5" />
-              </a>
-              <a 
-                href="mailto:murat@tokak.dev" 
-                className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:glow-effect"
-                aria-label="Email"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
-              <a 
-                href="tel:+905001234567" 
-                className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:glow-effect"
-                aria-label="Phone"
-              >
-                <Phone className="w-5 h-5" />
-              </a>
-            </div>
+    <section id="about" className="pt-28 pb-20 px-6">
+      <div className="max-w-3xl mx-auto text-center">
+        {/* Profile Image */}
+        <div className="mb-8 opacity-0 animate-fade-up">
+          <div className="w-32 h-32 mx-auto rounded-full bg-secondary border-4 border-primary/20 overflow-hidden flex items-center justify-center">
+            <span className="text-xs text-muted-foreground font-mono">foto</span>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground">
-          <span className="text-xs font-mono">scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-primary to-transparent" />
+        {/* Name & Title */}
+        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3 opacity-0 animate-fade-up stagger-1">
+          Murat Tokak
+        </h1>
+        
+        <p className="text-xl text-primary font-medium mb-6 opacity-0 animate-fade-up stagger-2">
+          Full Stack Software Developer
+        </p>
+        
+        {/* Summary */}
+        <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8 opacity-0 animate-fade-up stagger-3">
+          Kurumsal yazılım geliştirme, API entegrasyonları ve veritabanı yönetimi konularında 
+          deneyimli yazılım geliştiricisi. Temiz kod prensipleri, SOLID ilkeleri ve 
+          sürdürülebilir mimari yapılar konusunda uzmanlaşmış.
+        </p>
+
+        {/* Contact Links */}
+        <div className="flex items-center justify-center gap-3 flex-wrap opacity-0 animate-fade-up stagger-4">
+          <a 
+            href="mailto:murat@tokak.dev" 
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:bg-primary/90 transition-colors"
+          >
+            <Mail className="w-4 h-4" />
+            İletişime Geç
+          </a>
+          <a 
+            href="https://github.com/murattokak" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary text-secondary-foreground rounded-lg font-medium text-sm hover:bg-secondary/80 transition-colors"
+          >
+            <Github className="w-4 h-4" />
+            GitHub
+          </a>
+          <a 
+            href="https://linkedin.com/in/murattokak" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary text-secondary-foreground rounded-lg font-medium text-sm hover:bg-secondary/80 transition-colors"
+          >
+            <Linkedin className="w-4 h-4" />
+            LinkedIn
+          </a>
         </div>
       </div>
     </section>
