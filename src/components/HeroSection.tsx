@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Github, Linkedin, Mail, BookOpen } from 'lucide-react';
+import { Github, Linkedin, Mail, BookOpen, Download } from 'lucide-react';
 import profilePhoto from '@/assets/profile-photo.jpg';
 import ContactForm from './ContactForm';
 
@@ -46,6 +46,14 @@ const HeroSection = () => {
             <Mail className="w-4 h-4" />
             İletişime Geç
           </button>
+          <a 
+            href="/cv/murat-tokak-cv.pdf"
+            download="Murat_Tokak_CV.pdf"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground rounded-lg font-medium text-sm hover:bg-accent/80 transition-colors"
+          >
+            <Download className="w-4 h-4" />
+            CV İndir
+          </a>
           <a 
             href="https://github.com/tokak" 
             target="_blank" 
