@@ -1,13 +1,22 @@
+import { useState } from 'react';
 import { Github, Linkedin, Mail, BookOpen } from 'lucide-react';
+import profilePhoto from '@/assets/profile-photo.jpg';
+import ContactForm from './ContactForm';
 
 const HeroSection = () => {
+  const [contactFormOpen, setContactFormOpen] = useState(false);
+
   return (
     <section id="about" className="pt-28 pb-20 px-6">
       <div className="max-w-3xl mx-auto text-center">
         {/* Profile Image */}
         <div className="mb-8 opacity-0 animate-fade-up">
-          <div className="w-32 h-32 mx-auto rounded-full bg-secondary border-4 border-primary/20 overflow-hidden flex items-center justify-center">
-            <span className="text-xs text-muted-foreground font-mono">foto</span>
+          <div className="w-32 h-32 mx-auto rounded-full bg-secondary border-4 border-primary/20 overflow-hidden">
+            <img 
+              src={profilePhoto} 
+              alt="Murat Tokak" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 
@@ -30,13 +39,13 @@ const HeroSection = () => {
 
         {/* Contact Links */}
         <div className="flex items-center justify-center gap-3 flex-wrap opacity-0 animate-fade-up stagger-4">
-          <a 
-            href="mailto:tokakmurat01@gmail.com" 
+          <button 
+            onClick={() => setContactFormOpen(true)}
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:bg-primary/90 transition-colors"
           >
             <Mail className="w-4 h-4" />
             İletişime Geç
-          </a>
+          </button>
           <a 
             href="https://github.com/tokak" 
             target="_blank" 
@@ -66,6 +75,8 @@ const HeroSection = () => {
           </a>
         </div>
       </div>
+
+      <ContactForm open={contactFormOpen} onOpenChange={setContactFormOpen} />
     </section>
   );
 };
