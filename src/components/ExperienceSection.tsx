@@ -2,27 +2,43 @@ import { ExternalLink, Briefcase } from 'lucide-react';
 
 const experiences = [
   {
-    title: 'Full Stack Developer',
-    company: 'QLTEQ',
-    period: '2022 - Günümüz',
-    description: 'Kurumsal web uygulamaları ve API geliştirme. Mikroservis mimarisi ve veritabanı optimizasyonu.',
-    technologies: ['C#', 'ASP.NET Core', 'React', 'MSSQL', 'Docker'],
-    link: 'https://qlteq.com'
-  },
-  {
     title: 'Yazılım Geliştirici',
-    company: 'Erzincan Binali Yıldırım Üniversitesi',
-    period: '2020 - 2022',
-    description: 'Üniversite bilgi yönetim sistemleri, öğrenci portalı ve akademik modül geliştirme.',
-    technologies: ['PHP', 'Laravel', 'MySQL', 'Vue.js', 'REST API'],
+    company: 'QLTEQ Teknoloji Yazılım Danışmanlığı A.Ş.',
+    period: 'Güncel',
+    description: 'Mevcut projelerde frontend ve backend tarafında hataların düzeltilmesi ve geliştirme çalışmaları gerçekleştirdim. Git versiyon kontrol sistemi (Bitbucket) üzerinde çalıştım.',
+    technologies: ['ASP.NET Core', 'C#', 'MSSQL', 'Git', 'Bitbucket'],
     link: null
   },
   {
-    title: 'Freelance Developer',
-    company: 'Bağımsız Projeler',
-    period: '2018 - 2020',
-    description: 'E-ticaret platformları, kurumsal web siteleri ve özel CRM çözümleri.',
-    technologies: ['JavaScript', 'Node.js', 'MongoDB', 'PostgreSQL'],
+    title: 'E-Tez Sistemi Projesi',
+    company: 'Erzincan Binali Yıldırım Ünv. Bilgi İşlem',
+    period: 'Proje',
+    description: 'Öğrencilerin tez yükleme ve intihal kontrolü yapabildiği, öğretim üyelerinin ise rapor inceleme, onay ve savunma süreçlerini çevrimiçi yönetebildiği bir web uygulaması geliştirdim.',
+    technologies: ['ASP.NET Core', 'C#', 'MSSQL', 'Entity Framework Core', 'SOAP API', 'Bootstrap', 'JavaScript'],
+    link: 'https://e-tez.ebyu.edu.tr/'
+  },
+  {
+    title: 'EUTAS - Merkezi Araştırma Laboratuvarı',
+    company: 'Erzincan Binali Yıldırım Ünv. Fen Bilimleri Enstitüsü',
+    period: 'Proje',
+    description: 'Merkezi Araştırma Laboratuvarı için çevrimiçi randevu, analiz talepleri için proforma oluşturma, otomatik e-posta bildirimleri ve mesajlaşma sistemi içeren bir web sitesi geliştirdim.',
+    technologies: ['ASP.NET Core', 'C#', 'MSSQL', 'Entity Framework Core', 'Rotativa', 'Bootstrap', 'JavaScript'],
+    link: 'https://eutas.ebyu.edu.tr/'
+  },
+  {
+    title: 'EYS - Enstitü Yönetim Sistemi',
+    company: 'Erzincan Binali Yıldırım Ünv. Fen Bilimleri Enstitüsü',
+    period: 'Proje',
+    description: 'Üniversite akademisyenlerinin Excel\'den yüklenen öğrenci bilgileriyle akademik süre ve tez dönemlerini takip edebildiği, otomatik uyarı-silme işlemleri ve bildirim/e-posta desteği sunan web tabanlı bir sistem geliştirdim.',
+    technologies: ['ASP.NET Core', 'C#', 'MSSQL', 'Entity Framework Core', 'Bootstrap', 'JavaScript'],
+    link: 'https://eys.ebyu.edu.tr/'
+  },
+  {
+    title: 'Depo Stok Takip Sistemi',
+    company: 'Ordinatrum Bilişim Teknolojileri ve Danışmanlık',
+    period: 'Proje',
+    description: 'ASP.NET Core MVC, C#, Entity Framework Core ve MSSQL ile depo stok takip sistemi geliştirdim. Ürün giriş çıkış takibi, Excel raporlama modülüyle ürünlerin depo çıkış süreçlerini yönettim.',
+    technologies: ['ASP.NET Core MVC', 'C#', 'MSSQL', 'Entity Framework Core', 'Excel'],
     link: null
   }
 ];
@@ -31,8 +47,8 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="py-16 px-6">
       <div className="max-w-3xl mx-auto">
-        <h2 className="section-title">İş Deneyimi</h2>
-        <p className="section-subtitle">Profesyonel kariyer geçmişim</p>
+        <h2 className="section-title">Deneyim & Projeler</h2>
+        <p className="section-subtitle">Profesyonel kariyer ve proje geçmişim</p>
         
         <div className="space-y-6">
           {experiences.map((exp, index) => (
@@ -58,7 +74,7 @@ const ExperienceSection = () => {
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
-                          aria-label="Web sitesi"
+                          aria-label="Projeyi görüntüle"
                         >
                           <ExternalLink className="w-4 h-4" />
                         </a>

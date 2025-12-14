@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Github, Linkedin, BookOpen } from 'lucide-react';
+import { Mail, MapPin, Github, Linkedin, BookOpen, User } from 'lucide-react';
 
 const ContactSection = () => {
   return (
@@ -14,24 +14,28 @@ const ContactSection = () => {
               <h3 className="font-semibold text-foreground mb-4">İletişim Bilgileri</h3>
               
               <a 
-                href="mailto:murat@tokak.dev"
+                href="mailto:tokakmurat01@gmail.com"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-5 h-5 text-primary" />
-                <span>murat@tokak.dev</span>
-              </a>
-              
-              <a 
-                href="tel:+905001234567"
-                className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Phone className="w-5 h-5 text-primary" />
-                <span>+90 500 123 45 67</span>
+                <span>tokakmurat01@gmail.com</span>
               </a>
               
               <div className="flex items-center gap-3 text-muted-foreground">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span>Türkiye</span>
+                <span>Diyarbakır, İstanbul, Kocaeli, Kayseri</span>
+              </div>
+
+              <div className="pt-4 border-t border-border">
+                <h4 className="text-sm font-medium text-foreground mb-3">Kişisel Bilgiler</h4>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-2">
+                    <User className="w-4 h-4 text-primary" />
+                    <span>Doğum Yeri: Diyarbakır</span>
+                  </div>
+                  <p>Medeni Durum: Bekar</p>
+                  <p>Askerlik: Yapıldı</p>
+                </div>
               </div>
             </div>
             
@@ -39,35 +43,44 @@ const ContactSection = () => {
             <div>
               <h3 className="font-semibold text-foreground mb-4">Sosyal Medya</h3>
               
-              <div className="flex gap-3">
+              <div className="space-y-3">
                 <a 
-                  href="https://github.com/murattokak"
+                  href="https://github.com/tokak"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
-                  aria-label="GitHub"
+                  className="flex items-center gap-3 p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors group"
                 >
                   <Github className="w-5 h-5" />
+                  <div>
+                    <p className="font-medium text-sm">GitHub</p>
+                    <p className="text-xs text-muted-foreground group-hover:text-primary-foreground/70">github.com/tokak</p>
+                  </div>
                 </a>
                 
                 <a 
-                  href="https://linkedin.com/in/murattokak"
+                  href="https://www.linkedin.com/in/murattokak/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
-                  aria-label="LinkedIn"
+                  className="flex items-center gap-3 p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors group"
                 >
                   <Linkedin className="w-5 h-5" />
+                  <div>
+                    <p className="font-medium text-sm">LinkedIn</p>
+                    <p className="text-xs text-muted-foreground group-hover:text-primary-foreground/70">linkedin.com/in/murattokak</p>
+                  </div>
                 </a>
                 
                 <a 
-                  href="https://medium.com/@murattokak"
+                  href="https://medium.com/@tokakmurat01"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
-                  aria-label="Medium"
+                  className="flex items-center gap-3 p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors group"
                 >
                   <BookOpen className="w-5 h-5" />
+                  <div>
+                    <p className="font-medium text-sm">Medium</p>
+                    <p className="text-xs text-muted-foreground group-hover:text-primary-foreground/70">medium.com/@tokakmurat01</p>
+                  </div>
                 </a>
               </div>
             </div>

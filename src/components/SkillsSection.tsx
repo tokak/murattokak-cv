@@ -1,8 +1,8 @@
 const skills = {
-  languages: ['C#', 'PHP', 'JavaScript', 'TypeScript', 'SQL', 'HTML5', 'CSS3'],
-  frameworks: ['ASP.NET Core', 'Entity Framework Core', 'Blazor', 'React', 'Laravel', 'Vue.js', 'Node.js', 'REST API'],
-  databases: ['MSSQL', 'MySQL', 'MongoDB', 'PostgreSQL', 'Redis', 'SQLite'],
-  tools: ['Git', 'Docker', 'Azure', 'Visual Studio', 'VS Code', 'Postman', 'Jira']
+  languages: ['C#', 'JavaScript', 'jQuery', 'PHP', 'HTML5', 'CSS3'],
+  frameworks: ['ASP.NET Core', 'Entity Framework Core', 'Dapper', 'ADO.NET', 'LINQ', 'Identity', 'Bootstrap', 'REST API'],
+  databases: ['MSSQL', 'MySQL', 'MongoDB', 'PostgreSQL'],
+  tools: ['Git', 'Bitbucket', 'Visual Studio', 'VS Code', 'Rotativa', 'SOAP API']
 };
 
 const SkillCategory = ({ title, items }: { title: string; items: string[] }) => (
