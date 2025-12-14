@@ -1,6 +1,11 @@
-import { Mail, MapPin, Github, Linkedin, BookOpen, User } from 'lucide-react';
+import { useState } from 'react';
+import { Mail, MapPin, Github, Linkedin, BookOpen, User, MessageSquare } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import ContactForm from './ContactForm';
 
 const ContactSection = () => {
+  const [contactFormOpen, setContactFormOpen] = useState(false);
+
   return (
     <section id="contact" className="py-16 px-6 bg-secondary/30">
       <div className="max-w-3xl mx-auto">
@@ -85,8 +90,21 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
+
+          {/* Contact Form Button */}
+          <div className="mt-8 pt-6 border-t border-border text-center">
+            <Button 
+              onClick={() => setContactFormOpen(true)}
+              className="gap-2"
+            >
+              <MessageSquare className="w-4 h-4" />
+              Mesaj Gönder
+            </Button>
+          </div>
         </div>
       </div>
+
+      <ContactForm open={contactFormOpen} onOpenChange={setContactFormOpen} />
     </section>
   );
 };
