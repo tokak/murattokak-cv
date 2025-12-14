@@ -1,33 +1,33 @@
-import { Mail, Phone, User } from 'lucide-react';
+import { Mail, ExternalLink, User } from 'lucide-react';
 
 const references = [
   {
     name: 'Yıldız Aydın',
-    title: 'Proje Yöneticisi',
-    company: 'QLTEQ',
-    email: 'yildiz.aydin@example.com',
-    phone: '+90 500 000 00 00'
-  },
-  {
-    name: 'Erman Köse',
-    title: 'Teknik Direktör',
-    company: 'QLTEQ',
-    email: 'erman.kose@example.com',
-    phone: '+90 500 000 00 00'
+    title: 'Dr. Öğr. Üyesi',
+    company: 'Erzincan Binali Yıldırım Üniversitesi',
+    email: 'yciltas@erzincan.edu.tr',
+    link: 'https://avesis.ebyu.edu.tr/yciltas'
   },
   {
     name: 'Ferhat Cengiz',
-    title: 'Bölüm Başkanı',
-    company: 'Erzincan Binali Yıldırım Ünv.',
-    email: 'ferhat.cengiz@example.com',
-    phone: '+90 500 000 00 00'
+    title: 'Full Stack Developer - Tech Lead | .NET',
+    company: 'YouthSide.co',
+    email: 'fcngz.career@gmail.com',
+    link: 'https://www.linkedin.com/in/ferhatcengizz/'
+  },
+  {
+    name: 'Erman Köse',
+    title: 'Yazılım Geliştiricisi',
+    company: 'Erzincan Binali Yıldırım Ünv. Bilgi İşlem',
+    email: 'ekose@erzincan.edu.tr',
+    link: null
   },
   {
     name: 'Ömer Faruk İnci',
-    title: 'Yazılım Mimarı',
-    company: 'Freelance',
-    email: 'omer.inci@example.com',
-    phone: '+90 500 000 00 00'
+    title: 'Programcı',
+    company: 'Erzincan Binali Yıldırım Ünv. Bilgi İşlem',
+    email: 'omer.inci@erzincan.edu.tr',
+    link: null
   }
 ];
 
@@ -41,31 +41,37 @@ const ReferencesSection = () => {
         <div className="grid sm:grid-cols-2 gap-4">
           {references.map((ref, index) => (
             <div key={index} className="card-corporate">
-              <div className="flex items-start gap-3 mb-3">
-                <div className="p-2 rounded-full bg-primary/10 text-primary">
-                  <User className="w-4 h-4" />
+              <div className="flex items-start justify-between gap-3 mb-3">
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-full bg-primary/10 text-primary">
+                    <User className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">{ref.name}</h3>
+                    <p className="text-sm text-muted-foreground">{ref.title}</p>
+                    <p className="text-sm text-primary font-medium">{ref.company}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-foreground">{ref.name}</h3>
-                  <p className="text-sm text-muted-foreground">{ref.title}</p>
-                  <p className="text-sm text-primary font-medium">{ref.company}</p>
-                </div>
+                {ref.link && (
+                  <a 
+                    href={ref.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors shrink-0"
+                    aria-label="Profili görüntüle"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                )}
               </div>
               
-              <div className="space-y-1.5 text-sm">
+              <div className="text-sm">
                 <a 
                   href={`mailto:${ref.email}`}
                   className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Mail className="w-3.5 h-3.5" />
                   <span>{ref.email}</span>
-                </a>
-                <a 
-                  href={`tel:${ref.phone}`}
-                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <Phone className="w-3.5 h-3.5" />
-                  <span>{ref.phone}</span>
                 </a>
               </div>
             </div>

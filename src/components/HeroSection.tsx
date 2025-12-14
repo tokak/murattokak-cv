@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Phone, FileText } from 'lucide-react';
+import { Github, Linkedin, Mail, BookOpen } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -17,27 +17,28 @@ const HeroSection = () => {
         </h1>
         
         <p className="text-xl text-primary font-medium mb-6 opacity-0 animate-fade-up stagger-2">
-          Full Stack Software Developer
+          Bilgisayar Mühendisi
         </p>
         
         {/* Summary */}
         <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8 opacity-0 animate-fade-up stagger-3">
-          Kurumsal yazılım geliştirme, API entegrasyonları ve veritabanı yönetimi konularında 
-          deneyimli yazılım geliştiricisi. Temiz kod prensipleri, SOLID ilkeleri ve 
-          sürdürülebilir mimari yapılar konusunda uzmanlaşmış.
+          Bilgisayar Programcılığı ön lisans ve Bilgisayar Mühendisliği mezunuyum. 
+          ASP.NET Core, C#, MSSQL, JavaScript ve Bootstrap ile web projeleri geliştirdim. 
+          Entity Framework Core, Dapper, ADO.NET, LINQ ve Identity konularında deneyim sahibiyim. 
+          Takım çalışmasına yatkın, sorumluluk sahibi ve öğrenmeye açık bir yazılım geliştiricisiyim.
         </p>
 
         {/* Contact Links */}
         <div className="flex items-center justify-center gap-3 flex-wrap opacity-0 animate-fade-up stagger-4">
           <a 
-            href="mailto:murat@tokak.dev" 
+            href="mailto:tokakmurat01@gmail.com" 
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:bg-primary/90 transition-colors"
           >
             <Mail className="w-4 h-4" />
             İletişime Geç
           </a>
           <a 
-            href="https://github.com/murattokak" 
+            href="https://github.com/tokak" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary text-secondary-foreground rounded-lg font-medium text-sm hover:bg-secondary/80 transition-colors"
@@ -46,13 +47,22 @@ const HeroSection = () => {
             GitHub
           </a>
           <a 
-            href="https://linkedin.com/in/murattokak" 
+            href="https://www.linkedin.com/in/murattokak/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary text-secondary-foreground rounded-lg font-medium text-sm hover:bg-secondary/80 transition-colors"
           >
             <Linkedin className="w-4 h-4" />
             LinkedIn
+          </a>
+          <a 
+            href="https://medium.com/@tokakmurat01" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary text-secondary-foreground rounded-lg font-medium text-sm hover:bg-secondary/80 transition-colors"
+          >
+            <BookOpen className="w-4 h-4" />
+            Medium
           </a>
         </div>
       </div>

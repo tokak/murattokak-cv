@@ -4,13 +4,13 @@ const education = [
   {
     degree: 'Bilgisayar Mühendisliği',
     school: 'Erzincan Binali Yıldırım Üniversitesi',
-    period: '2018 - 2022',
-    type: 'Lisans'
+    period: '2020 - 2022',
+    type: 'Lisans Tamamlama'
   },
   {
     degree: 'Bilgisayar Programcılığı',
-    school: 'Erzincan Binali Yıldırım Üniversitesi',
-    period: '2016 - 2018',
+    school: 'Van Yüzüncü Yıl Üniversitesi',
+    period: '2022 - 2025',
     type: 'Ön Lisans'
   }
 ];
