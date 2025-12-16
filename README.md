@@ -1,73 +1,62 @@
-# Welcome to your Lovable project
 
-## Project info
+## Kişisel Portfolyo/CV Sitesi: İletişim Formu Otomasyonu
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Proje Linki: https://murattokakcv.lovable.app/
 
-## How can I edit this code?
 
-There are several ways of editing your application.
+Kişisel Portfolyo/CV Sitesi geliştirdim ve sitedeki İletişim Formunu n8n ile otomatik bildirim sistemine bağladım.
 
-**Use Lovable**
+Kullanıcı `İletişime Geç` veya `Mesaj Gönder` butonuna tıkladığında form açılmaktadır. Formda Ad, Soyad, E-posta ve Mesaj bilgileri girilip gönderildiğinde, form verileri n8n Webhook üzerinden alınmaktadır.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Mesaj bana e-posta ve telegramdan anlık bildirim  olarak kullanıcının ne yazdıgı mesaj ile berabar iletilmektedir.
 
-Changes made via Lovable will be committed automatically to this repo.
+İşlem tamamlandığında kullanıcıya ekranda başarılı gönderim geri bildirimi mesajı ve n8n ile otomatik mesajınız alındı mesajı gönderilir.
 
-**Use your preferred IDE**
+## N8N WORKFLOW ÖZETİ
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+**Webhook (Trigger)**
+ - Portfolyo sitesindeki iletişim formundan gelen POST isteğini karşılar (ad, soyad, e-posta, mesaj).
+ - Webhook üzerinden alınan verileri kullanarak mesajı benim e-posta adresime iletir.
+ - Yeni bir mesaj geldiğinde Telegram üzerinden anlık bildirim gönderir. Bildirim içeriğinde gönderen bilgisi ve mesajı  yer alır.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+**Response / Feedback**
+ - Web sitesine başarılı yanıt dönerek kullanıcıya “Mesajınız alındı” şeklinde geri bildirim sağlar.
 
-Follow these steps:
+**kişisel portfolio sitesinden fotograflar ve form üzerinden mesaj gönderildiğinde otomatik mail gelmesi, telegram bot bildirimi ve geri dönüş mail bildirimlerin ekran görüntüsü aşağıdadır.**
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+<img width="1934" height="666" alt="image" src="https://github.com/user-attachments/assets/bfb0a266-7b1c-45cc-9853-16d7bdffe668" />
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+**İletişim Formu**
+<img width="1082" height="743" alt="image" src="https://github.com/user-attachments/assets/8c7a36c1-4935-4565-81a1-befc9bb1a7f8" />
 
-# Step 3: Install the necessary dependencies.
-npm i
+**Mesaj gönderildi bildirimi geldiyse mail ve telegram botuna mesaj gelmiştir**
+<img width="475" height="150" alt="image" src="https://github.com/user-attachments/assets/48563778-e164-4f57-a788-baaf4964e7a7" />
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+**Mail ekran görüntüsü**
+<img width="881" height="392" alt="image" src="https://github.com/user-attachments/assets/61181315-769e-427a-a8a4-8832aeceb4e9" />
 
-**Edit a file directly in GitHub**
+**Telegram Ekran Görüntüsü**
+<img width="716" height="1482" alt="image" src="https://github.com/user-attachments/assets/08d5c4b2-8add-4ae9-a4aa-66d944bbdc0f" />
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+**Geri bildirim Mail Ekran Görüntüsü**
+<img width="689" height="259" alt="image" src="https://github.com/user-attachments/assets/96956fed-0c81-4141-81a8-3bea7da9e5c8" />
 
-**Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
 
-This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
-## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
 
-Yes, you can!
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+
+
+
+
+
+
+
+
