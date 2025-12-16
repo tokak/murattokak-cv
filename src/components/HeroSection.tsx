@@ -13,7 +13,7 @@ const HeroSection = () => {
         <div className="mb-8 opacity-0 animate-fade-up">
           <div className="w-32 h-32 mx-auto rounded-full bg-secondary border-4 border-primary/20 overflow-hidden">
             <img 
-              src="https://hizliresim.com/f4y5q5r" 
+              src="https://i.hizliresim.com/f4y5q5r.jpg" 
               alt="Murat Tokak" 
               className="w-full h-full object-cover"
             />
