@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Github, Linkedin, Mail, BookOpen, Download } from 'lucide-react';
-import profilePhoto from '@/assets/profile-photo.jpg';
+
 import ContactForm from './ContactForm';
 
 const HeroSection = () => {
@@ -13,7 +13,7 @@ const HeroSection = () => {
         <div className="mb-8 opacity-0 animate-fade-up">
           <div className="w-32 h-32 mx-auto rounded-full bg-secondary border-4 border-primary/20 overflow-hidden">
             <img 
-              src={profilePhoto} 
+              src="https://hizliresim.com/f4y5q5r" 
               alt="Murat Tokak" 
               className="w-full h-full object-cover"
             />
