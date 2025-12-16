@@ -97,7 +97,7 @@ const ContactForm = ({ open, onOpenChange }: ContactFormProps) => {
         payload[key] = value as string;
       });
 
-      const webhookUrl = "https://murattokak.app.n8n.cloud/webhook-test/9974dec9-9b14-46e2-8580-4224001f726f";
+      const webhookUrl = "https://murattokak.app.n8n.cloud/webhook/9974dec9-9b14-46e2-8580-4224001f726f";
 
       const response = await fetch(webhookUrl, {
         method: "POST",
